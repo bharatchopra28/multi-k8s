@@ -15,5 +15,3 @@ spec:
       containers:
         - name: worker
           image: bharatchopra/multi-worker
-          ports:
-            - containerPort: 6379
