@@ -11,7 +11,7 @@ spec:
   tls:
     - hosts:
       - tazanews.online
-    secretName: tazanews-online
+      secretName: tazanews-online
   rules:
     - host: tazanews.online
       http:
