@@ -11,9 +11,21 @@ spec:
   tls:
     - hosts:
       - tazanews.online
+      - www.tazanews.online
       secretName: tazanews-online
   rules:
     - host: tazanews.online
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: client-cluster-ip-service
+              servicePort: 3000
+          - path: /api/
+            backend:
+              serviceName: server-cluster-ip-service
+              servicePort: 5000
+    - host: www.tazanews.online
       http:
         paths:
           - path: /
