@@ -10,9 +10,11 @@ spec:
   commonName: tazanews.online
   dnsNames:
     - tazanews.online
+    - www.tazanews.online
   acme:
     config:
       - http01:
           ingressClass: nginx
         domains:
           - tazanews.online
+          - www.tazanews.online
